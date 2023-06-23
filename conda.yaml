@@ -9,10 +9,8 @@ dependencies:
   - python=3.9.16                   # https://pyreadiness.org/3.9/
   - pip=22.1.2                      # https://pip.pypa.io/en/stable/news/
   - pip:
-      - rpaframework==23.3.0        # https://rpaframework.org/releasenotes.html
-      - robocorp-tasks==1.0.0       # https://pypi.org/project/robocorp-tasks/
-      - robocorp-browser==1.0.1     # https://pypi.org/project/robocorp-browser/
-      - robocorp-excel==0.4.0       # https://pypi.org/project/robocorp-excel/
-      - robocorp-workitems==1.0.1   # https://pypi.org/project/robocorp-workitems/
-      - robocorp-http==0.2.0        # https://pypi.org/project/robocorp-http/
-      - robocorp-vault==0.4.0       # https://pypi.org/project/robocorp-vault/
+      - rpaframework==23.3.0                  # https://rpaframework.org/releasenotes.html
+      - rpaframework-assistant==2.3.0         # https://rpaframework.org/releasenotes.html
+      - openai==0.27.8                        # https://pypi.org/project/openai/
+      - robocorp-tasks==1.0.0                 # https://pypi.org/project/robocorp-tasks/
+      - robocorp-vault==0.4.0                 # https://pypi.org/project/robocorp-vault/

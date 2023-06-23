@@ -10,7 +10,7 @@ tasks:
       - run
       - tasks.py
       - -t
-      - minimal_task
+      - display_window
 devTasks: {}
 condaConfigFile: conda.yaml
 ignoreFiles:
