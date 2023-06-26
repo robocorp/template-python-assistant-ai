@@ -2,7 +2,7 @@
 # https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
 
 tasks:
-  minimal_task:
+  display_window:
     command:
       - python
       - -m
