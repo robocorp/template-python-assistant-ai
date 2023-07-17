@@ -1,4 +1,4 @@
-# Template: Python - Assistant and AI
+# Template: Python - Assistant AI Chat
 
 This template leverages the new Python open-source structure [robo](https://github.com/robocorp/robo), the [libraries](https://github.com/robocorp/robo#libraries) from to same project as well.
 The full power of [rpaframework](https://github.com/robocorp/rpaframework) is also available for you on Python as a backup while we implement new Python libraries.
