@@ -11,7 +11,7 @@ dependencies:
   - pip:
     - rpaframework==23.5.2            # https://rpaframework.org/releasenotes.html
     - rpaframework-assistant==2.3.0   # https://pypi.org/project/rpaframework-assistant
-    - robocorp==0.4.0                 # https://pypi.org/project/robocorp
+    - robocorp==0.8.1                 # https://pypi.org/project/robocorp
     - robocorp-browser==1.0.2         # https://pypi.org/project/robocorp-browser
     - robocorp-excel==0.4.0           # https://pypi.org/project/robocorp-excel
     - robocorp-http==0.2.0            # https://pypi.org/project/robocorp-http
