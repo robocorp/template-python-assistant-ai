@@ -8,10 +8,10 @@ channels:
 dependencies:
   - python=3.10.12                # https://pyreadiness.org/3.10
   - pip=23.2.1                    # https://pip.pypa.io/en/stable/news
-  - truststore=0.7.0              # https://github.com/sethmlarson/truststore/blob/main/CHANGELOG.md
+  - robocorp-truststore=0.8.0     # https://pypi.org/project/robocorp-truststore/
   - pip:
-    - rpaframework==27.1.0            # https://rpaframework.org/releasenotes.html
-    - rpaframework-assistant==3.0.0   # https://pypi.org/project/rpaframework-assistant
+    - rpaframework==27.4.1            # https://rpaframework.org/releasenotes.html
+    - rpaframework-assistant==3.0.1   # https://pypi.org/project/rpaframework-assistant
     - robocorp==1.0.0                 # https://pypi.org/project/robocorp
     - robocorp-browser==2.1.0         # https://pypi.org/project/robocorp-browser
-    - openai==0.28.0                  # https://pypi.org/project/openai/
+    - openai==0.28.1                  # https://pypi.org/project/openai/
