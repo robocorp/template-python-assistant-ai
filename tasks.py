@@ -3,13 +3,14 @@ from robocorp.tasks import task
 
 from RPA.Assistant.types import WindowLocation, Size
 import RPA.Assistant
-import openai
+from openai import OpenAI
 
 
 assistant = RPA.Assistant.Assistant()
 gpt_conversation_display = []
 gpt_conversation_internal = []
 gpt_model = "gpt-3.5-turbo"
+openai_client = None
 
 
 @task
@@ -24,8 +25,10 @@ def display_window():
 
 
 def authorize_openai():
+    global openai_client
+
     secrets_container = vault.get_secret("openai")
-    openai.api_key = secrets_container["key"]
+    openai_client = OpenAI(api_key=secrets_container["key"])
 
 
 def show_spinner():
@@ -40,7 +43,7 @@ def ask_gpt(form_data: dict):
     show_spinner()
 
     gpt_conversation_internal.append({"role": "user", "content": form_data["input"]})
-    response = openai.ChatCompletion.create(
+    response = openai_client.chat.completions.create(
         model=gpt_model,
         messages=gpt_conversation_internal,
         temperature=1,
@@ -48,7 +51,7 @@ def ask_gpt(form_data: dict):
         frequency_penalty=0,
         presence_penalty=0,
     )
-    text = response["choices"][0]["message"]["content"]
+    text = response.choices[0].message.content
     gpt_conversation_internal.append({"role": "assistant", "content": text})
     gpt_conversation_display.append((form_data["input"], text))
 
