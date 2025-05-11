@@ -9,7 +9,7 @@ from openai import OpenAI
 assistant = RPA.Assistant.Assistant()
 gpt_conversation_display = []
 gpt_conversation_internal = []
-gpt_model = "gpt-3.5-turbo"
+gpt_model = "gpt-4.1"
 openai_client = None
 
 
@@ -20,7 +20,10 @@ def display_window():
     display_conversation()
 
     assistant.run_dialog(
-        timeout=1800, title="AI Chat", on_top=True, location=WindowLocation.Center
+        timeout=1800,
+        title="AI Chat",
+        on_top=True,
+        location=WindowLocation.Center,
     )
 
 
@@ -33,7 +36,9 @@ def authorize_openai():
 
 def show_spinner():
     assistant.clear_dialog()
-    assistant.add_loading_spinner(name="spinner", width=60, height=60, stroke_width=8)
+    assistant.add_loading_spinner(
+        name="spinner", width=60, height=60, stroke_width=8
+    )
     assistant.refresh_dialog()
 
 
@@ -42,7 +47,9 @@ def ask_gpt(form_data: dict):
 
     show_spinner()
 
-    gpt_conversation_internal.append({"role": "user", "content": form_data["input"]})
+    gpt_conversation_internal.append(
+        {"role": "user", "content": form_data["input"]}
+    )
     response = openai_client.chat.completions.create(
         model=gpt_model,
         messages=gpt_conversation_internal,
@@ -77,6 +84,8 @@ def display_conversation():
 
 
 def display_buttons():
-    assistant.add_text_input("input", placeholder="Send a message", minimum_rows=3)
+    assistant.add_text_input(
+        "input", placeholder="Send a message", minimum_rows=3
+    )
     assistant.add_next_ui_button("Send", ask_gpt)
     assistant.add_submit_buttons("Close", default="Close")
