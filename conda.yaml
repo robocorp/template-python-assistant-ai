@@ -6,11 +6,11 @@ channels:
   - conda-forge
 
 dependencies:
-  - python=3.12.8                     # https://pyreadiness.org/3.12
-  - uv=0.6.11                         # https://pypi.org/project/uv
+  - python=3.12.11                     # https://pyreadiness.org/3.12
+  - uv=0.8.13                         # https://pypi.org/project/uv
   - pip:
-    - rpaframework==30.0.2            # https://rpaframework.org/releasenotes.html
-    - rpaframework-assistant==4.0.0   # https://pypi.org/project/rpaframework-assistant
+    - rpaframework==31.0.0            # https://rpaframework.org/releasenotes.html
+    - rpaframework-assistant==5.0.0   # https://pypi.org/project/rpaframework-assistant
     - robocorp==3.0.0                 # https://pypi.org/project/robocorp
     - robocorp-browser==2.3.5         # https://pypi.org/project/robocorp-browser
-    - openai==1.78.0                  # https://pypi.org/project/openai/
+    - openai==1.101.0                  # https://pypi.org/project/openai/
